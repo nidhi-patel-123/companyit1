@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solution Navbar</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+<!-- -----------------------navbar----------------------------------------- -->
+<nav class="navbar navbar-expand-lg px-4 py-2">
+  <a class="navbar-brand" href="#">
+    <div class="logo-dot"></div>
+   SOLUTIONS
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+      
+      <!-- Home -->
+      <li class="nav-item dropdown">
+        <div class="d-flex align-items-center">
+          <a class="nav-link" href="index.html">Home</a>
+          <i class="fas fa-chevron-down dropdown-icon ms-1" onclick="toggleDropdown(this)"></i>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="digital.html">Digital Agency</a></li>
+          <li><a class="dropdown-item" href="hTechnologies.html">AI Technologies</a></li>
+          <li><a class="dropdown-item" href="SoftwareSolution.html">Software Solution</a></li>
+          <li><a class="dropdown-item" href="SEOService.html">SEO Service</a></li>
+          <li><a class="dropdown-item" href="Startup.html">Startup</a></li>
+          <li><a class="dropdown-item" href="MarketingAgency.html">Marketing Agency</a></li>
+          <li><a class="dropdown-item" href="Helpdesk.html">Helpdesk</a></li>
+          <li><a class="dropdown-item" href="AINetwork.html">AI Network</a></li>
+        </ul>
+      </li>
+
+      <!-- Pages -->
+      <li class="nav-item dropdown">
+        <div class="d-flex align-items-center">
+          <a class="nav-link" href="Pages.html">Pages</a>
+          <i class="fas fa-chevron-down dropdown-icon ms-1" onclick="toggleDropdown(this)"></i>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="AboutUs-1.html">About Us-1</a></li>
+          <li><a class="dropdown-item" href="AboutUs-2.html">About Us-2</a></li>
+          <li><a class="dropdown-item" href="Service-1.html">Service-1</a></li>
+          <li><a class="dropdown-item" href="Service-2.html">Service-2</a></li>
+          <li><a class="dropdown-item" href="Service-3.html">Service-3</a></li>
+          <li><a class="dropdown-item" href="OurTeam.html">Our Team</a></li>
+          <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
+          <li><a class="dropdown-item" href="Pricing-1.html">Pricing-1</a></li>
+          <li><a class="dropdown-item" href="Pricing-2.html">Pricing-2</a></li>
+          <li><a class="dropdown-item" href="Contact-Us-1.html">Contact-Us-1</a></li>
+          <li><a class="dropdown-item" href="Contact-Us-2.html">Contact-Us-2</a></li>
+          <li><a class="dropdown-item" href="AiFeatures.html">Ai Features</a></li>
+          <li><a class="dropdown-item" href="Tools.html">Tools</a></li>
+        </ul>
+      </li>
+
+      <!-- Portfolio -->
+      <li class="nav-item dropdown">
+        <div class="d-flex align-items-center">
+          <a class="nav-link" href="Portfolio.html">Portfolio</a>
+          <i class="fas fa-chevron-down dropdown-icon ms-1" onclick="toggleDropdown(this)"></i>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="OurWork.html">Our Work</a></li>
+          <li><a class="dropdown-item" href="SingleProject.html"> Single Project</a></li>
+        </ul>
+      </li>
+
+      <!-- Blog -->
+      <li class="nav-item dropdown">
+        <div class="d-flex align-items-center">
+          <a class="nav-link" href="Blog.html">Blog</a>
+          <i class="fas fa-chevron-down dropdown-icon ms-1" onclick="toggleDropdown(this)"></i>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="Blog-Standard.html">Blog-Standard</a></li>
+          <li><a class="dropdown-item" href="Blog-Grid.html">Blog-Grid</a></li>
+          <li><a class="dropdown-item" href="Withsidebar.html">With Sidebar</a></li>
+          <li><a class="dropdown-item" href="Without-Sidebar.html">Without Sidebar</a></li>
+        </ul>
+      </li>
+
+      <!-- Contact -->
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+
+      <!-- Button -->
+      <li class="nav-item ms-lg-3">
+        <a href="Get-in-Touch.html" class="btn btn-primary">Get in Touch</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- ---------------------------hero----------------------------- -->
+
+ <section class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content" data-aos="fade-up">
+      <h5>Now is the time to take control.</h5>
+      <h1 class="display-5 fw-bold">Modern IT & Tech Services<br>& digital experiences</h1>
+      <div class="mt-4">
+        <a href="#contact" class="btn btn-primary px-4 py-2">Get In Touch</a>
+        <span class="d-inline-block ms-4">
+          <i class="bi bi-telephone phone-icon"></i> (+01) 0100 333 66
+        </span>
+      </div>
+    </div>
+  </section>
+<!-- -----------------------home about------------------------------ -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <!-- Text Content -->
+    <div class="col-lg-6 mb-4" data-aos="fade-right">
+      <h2 class="section-title">
+        TransMax Logistics <br> Around <span class="highlight-text">The World</span>
+      </h2>
+      <p class="mt-3">
+        Transmax is the world’s driving worldwide coordinations supplier — we uphold industry and exchange the worldwide trade of merchandise through land transport.
+      </p>
+      <p class="text-muted">
+        Our worth added administrations guarantee the progression of products proceeds consistently and supply chains stay lean and streamlined for progress.
+      </p>
+      <button class="btn btn-primary mt-3 " style="font-weight: bold;">MORE ABOUT US</button>
+    </div>
+
+    <!-- Image and Stats -->
+    <div class="col-lg-6" data-aos="fade-left">
+      <div class="row">
+        <div class="col-md-8 mb-3 image-wrapper">
+          <img src="./images/homeabout.webp" alt="Main" class="img-fluid main-img">
+          <img src="./images/homeabout2.webp" alt="Overlay" class="overlay-img d-none d-md-block img-fluid">
+        </div>
+     <div class="col-md-4 d-flex align-items-center justify-content-center">
+  <div class="stats-box">
+    <h3>15,350+</h3>
+    <p class="mb-0">Clients Worldwide</p>
+  </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- --------------------home servie---------------------------- -->
+ <section class="text-center py-5">
+  <div class="container">
+    <div class="section-title mb-2">DEPARTMENTS</div>
+    <h2 class="fw-bold display-6 mb-3">We enable constant enterprise<br> transformation at speed and scale.</h2>
+    <p class="mb-5 text-white-50">We craft unique digital experiences. With more than ten years of knowledge and expertise we design and code clean websites!</p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card card-custom">
+          <img src="images/homeservice1.png" alt="Image 1">
+          <div class="card-body">
+            <div class="card-icon">
+              <i class="bi bi-gear"></i>
+            </div>
+            <p class="fw-semibold" style="color: aliceblue;">Driving customer outcomes using new technology Driving customer out</p>
+            <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card card-custom">
+          <img src="images/homeservice2.png" alt="Image 2">
+          <div class="card-body">
+            <div class="card-icon">
+              <i class="bi bi-link-45deg"></i>
+            </div>
+            <p class="fw-semibold" style="color: aliceblue;">Questions must be able to answer every business must be able to answer</p>
+          <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card card-custom">
+          <img src="images/homeservice3.png" alt="Image 3">
+          <div class="card-body">
+            <div class="card-icon">
+              <i class="bi bi-tools"></i>
+            </div>
+            <p class="fw-semibold" style="color: aliceblue;">Questions must be able to answer every business must be able to answer</p>
+          <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Radix Section -->
+<section class="custom-section section-light-bg" id="radix">
+  <div class="container">
+    <div class="row align-items-center" data-aos="fade-right">
+      <div class="col-lg-6 image-effect mb-4 mb-lg-0">
+        <img
+          src="https://img.freepik.com/free-vector/cartoon-exhausted-woman-sitting-table-working_74855-6943.jpg?ga=GA1.1.1068734637.1747390429&semt=ais_hybrid&w=740"
+          alt="Radix Screenshot"
+          class="img-fluid shadow"
+          style="width: 100%; height: auto; max-height: 390px;"
+        />
+      </div>
+      <div class="col-lg-6">
+        <div class="card hover-card text-box" data-aos="fade-left" style="min-height: 390px;">
+          <h2 class="module-title">SOLUTION</h2>
+          <p style="color: gray; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            We are a forward-thinking solution company committed to helping businesses
+            overcome their most complex challenges through innovative and scalable strategies.
+            Our expert team combines cutting-edge technology with deep industry knowledge to
+            deliver customized solutions tailored to each client’s unique needs. From digital
+            transformation to improving operational efficiency, we partner closely with our
+            clients to ensure impactful and sustainable results. Focused on smart problem-solving
+            rather than one-size-fits-all fixes, we prioritize customer satisfaction and long-term
+            success. At our core, we turn challenges into opportunities by blending creativity,
+            clarity, and commitment.
+          </p>
+                 <button class=" btn btn-primary" style="width: 200px;">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rely Section -->
+<section class="custom-section section-dark-bg" id="rely">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse" data-aos="fade-left">
+      <div class="col-lg-6 image-effect mb-4 mb-lg-0">
+        <img
+          src="https://img.freepik.com/free-vector/work-home-concept-flat-design_1308-99034.jpg?ga=GA1.1.1068734637.1747390429&semt=ais_hybrid&w=740"
+          alt="Rely Screenshot"
+          class="img-fluid shadow"
+          style="width: 100%; height: auto; max-height: 390px;"
+        />
+      </div>
+      <div class="col-lg-6">
+        <div class="card hover-card text-box" data-aos="fade-right" style="min-height: 390px;">
+          <h2 class="module-title">TAKE</h2>
+          <p style="color: gray; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            We are a forward-thinking solution company committed to helping businesses
+            overcome their most complex challenges through innovative and scalable strategies.
+            Our expert team combines cutting-edge technology with deep industry knowledge to
+            deliver customized solutions tailored to each client’s unique needs. From digital
+            transformation to improving operational efficiency, we partner closely with our
+            clients to ensure impactful and sustainable results. Focused on smart problem-solving
+            rather than one-size-fits-all fixes, we prioritize customer satisfaction and long-term
+            success. At our core, we turn challenges into opportunities by blending creativity,
+            clarity, and commitment.
+          </p>
+          <button class=" btn btn-primary" style="width: 200px;">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- -----------------------------out latest project------------------------ -->
+ <section class="py-5 bg-light">
+  <div class="container text-center">
+    <p class=" text-uppercase mb-1" data-aos="fade-up">Latest Project</p>
+    <h2 class="fw-bold mb-5" data-aos="fade-up" data-aos-delay="100">
+      Our Recently Completed<br>Latest Projects
+    </h2>
+
+    <div class="row g-4">
+      <!-- Repeat this card structure -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject4.avif" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+               
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject1.avif" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+                
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject2.avif" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+                    <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+          
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject3.png" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+               <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- You can clone the above card for more items -->
+      <!-- Change data-aos-delay="300", "400", "500" etc. -->
+    </div>
+  </div>
+</section>
+<!-- ------------------------why us---------------------------- -->
+ <!-- <section class="why-choose-full">
+  <div class="row no-gutters align-items-center">
+   
+    <div class="col-md-6 p-0">
+      <div class="left-image" data-aos="fade-right">
+        <img src="images/homewhyus.png" alt="Team working" />
+      </div>
+    </div>
+
+  
+    <div class="col-md-6 why-choose-section" data-aos="fade-left" style="padding-left: 20px;">
+      <small class="text-warning">WHY CHOOSE US</small>
+      <h2 class="fw-bold mt-2">Why You should Choose Our <br> Technology Company?</h2>
+      <p class="mt-3">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-12 col-sm-6">
+          <div class="feature-box">
+            <i class="fas fa-cogs"></i>
+            <div>
+              <h6>Tech Solution</h6>
+              <small>There are many variations of passages of Lorem</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+          <div class="feature-box">
+            <i class="fas fa-headset"></i>
+            <div>
+              <h6>Quick Support</h6>
+              <small>There are many variations of passages of Lorem</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wave-shape"></div>
+    </div>
+  </div>
+</section> -->
+<!-- -------------------------------------------------------------what saying----------------------- -->
+
+<div class="container testimonial-section">
+  <div class="row align-items-center">
+    <!-- Left Side -->
+    <div class="col-md-6" data-aos="fade-right">
+      <h6 class="text-uppercase text-warning fw-bold">Testimonial</h6>
+      <h2 class="fw-bold">What Customers Are Saying?</h2>
+      <p class="text-muted">
+        There are many variations of passages of Lorem Ipsum available,
+        but the majority have suffered alteration in some form, by injected humour, or randomised.
+      </p>
+      <button class="btn btn-primary" style="background-color: #f29111;border: #f29111; border-radius: 0%;">Let’s talk</button>
+
+      <div class="mt-5 text-center text-md-start">
+        <img src="images/why.png" alt="VR Headset" class="floating-img"/>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+ <div class="testimonial-container">
+  <div class="testimonial-wrapper">
+    <div class="testimonial-slide" data-aos="fade-left">
+      <div class="testimonial-box">
+        <div class="star-rating mb-3">★★★★★</div>
+        <p class="text-muted">
+          Highly satisfied with the support and guidance provided by Ostech.<br>
+          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
+        </p>
+        <h6 class="fw-bold mb-0">Leslie Alexander</h6>
+        <small class="text-muted">Customer</small>
+        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Customer 1"/>
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Customer 2" class="highlighted"/>
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-slide" data-aos="fade-left">
+      <div class="testimonial-box">
+        <div class="star-rating mb-3">★★★★☆</div>
+          <p class="text-muted">
+          Highly satisfied with the support and guidance provided by Ostech.<br>
+          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
+        </p>
+        <h6 class="fw-bold mb-0">Michael Scott</h6>
+        <small class="text-muted">Customer</small>
+        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Customer 4"/>
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Customer 5" class="highlighted"/>
+          <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Customer 6"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-slide" data-aos="fade-left">
+      <div class="testimonial-box">
+        <div class="star-rating mb-3">★★★★★</div>
+          <p class="text-muted">
+          Highly satisfied with the support and guidance provided by Ostech.<br>
+          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
+        </p>
+        <h6 class="fw-bold mb-0">Pam Beesly</h6>
+        <small class="text-muted">Customer</small>
+        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
+          <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Customer 7"/>
+          <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Customer 8" class="highlighted"/>
+          <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Customer 9"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-slide" data-aos="fade-left">
+      <div class="testimonial-box">
+        <div class="star-rating mb-3">★★★★☆</div>
+        <p class="text-muted">
+          Highly satisfied with the support and guidance provided by Ostech.<br>
+          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
+        </p>
+        <h6 class="fw-bold mb-0">Jim Halpert</h6>
+        <small class="text-muted">Customer</small>
+        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Customer 10"/>
+          <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Customer 11" class="highlighted"/>
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Customer 12"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- CTA Section -->
+<!-- <div class="expert-cta container">
+  <div class="d-flex align-items-center mb-3 mb-md-0">
+    <div class="expert-icon me-3">
+      <i class="bi bi-people-fill"></i>
+    </div>
+    <h5 class="mb-0" style="color: white;">Expert IT Specialists Available</h5>
+  </div>
+  <a href="#" class="btn btn-primary" style="border-radius: 0%;">Discover More</a>
+</div>  -->
+<!-- -------------------contactus---============ -->
+
+
+<section class="contact-section" style="background-color: #f2901107;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <h6 class="text-uppercase text-muted">Contact Us</h6>
+          <h2 class="fw-bold">Request A Quote</h2>
+          <p class="mb-4">
+            At Teba Technology Solutions, we leverage IT security and automation to help you:
+            If you have any questions or need help, feel free to contact our team, or call
+            <span class="highlight-phone">(002) 010349845</span>
+          </p>
+          <img src="images/homecontact.webp" alt="Contact illustration" class="contact-image">
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Your Name (required)</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address (required)</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone (optional)</label>
+                <input type="tel" class="form-control" id="phone">
+              </div>
+              <div class="col-md-6">
+                <label for="subject" class="form-label">Select Subject (required)</label>
+                <select class="form-select" id="subject" required>
+                  <option value="">Select your subject</option>
+                  <option>General Inquiry</option>
+                  <option>Technical Support</option>
+                  <option>Request a Quote</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="6"></textarea>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary mt-3" style="border-radius: 0%;">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Partner Logos
+<div class=" mt-" data-aos="fade-up">
+  <div class=" flex text-center partner-logos">
+    <div class=""><img src="images/logo1.png" alt="Logo"></div>
+    <div class=""><img src="images/logo2.png" alt="Logo"></div>
+    <div class=""><img src="images/logo3.png" alt="Logo"></div>
+    <div class=""><img src="images/logo4.png" alt="Logo"></div>
+    <div class=""><img src="images/logo5.png" alt="Logo"></div>
+    <div class=""><img src="images/logo1.png" alt="Logo"></div>
+
+  </div>
+</div> -->
+<!-- -------------------------footer--------------------------------- -->
+<footer class="footer text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4" data-aos="fade-up">
+        <div class="brand">SOLUTIONS</div>
+        <p class="mt-3">
+          We are the best world Information Technology Company. Providing the highest quality in hardware, Software & Network solutions.
+        </p>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <h5>IT Services</h5>
+        <a href="#">IT Services</a>
+        <a href="#">Cyber Security</a>
+        <a href="#">Cloud Computing</a>
+        <a href="#">Managed IT</a>
+        <a href="#">IT Support</a>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <h5>Important Links</h5>
+        <a href="#">About Us</a>
+        <a href="#">Meet Our Team</a>
+        <a href="#">News & Media</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Locations</a>
+      </div>
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <h5>Get In Touch</h5>
+        <p><strong>Phone:</strong> (057) 253-321-456</p>
+        <p><strong>Email:</strong> Info@Solution.com</p>
+        <p><strong>Office Address:</strong> Collins Street West Victoria 8007 Australia</p>
+        <div class="social-icons mt-3">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-youtube"></i>
+          <i class="bi bi-instagram"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+      <p>©2020 Teba, All Rights Reserved. With Love by <a href="index.html" target="_blank">MotivoWeb.com</a></p>
+    </div>
+  </div>
+  <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <i class="bi bi-chevron-up"></i>
+  </div>
+</footer>
+
+<!-- JS for dropdown icon toggle (mobile only) -->
+<script>
+  function toggleDropdown(icon) {
+    if (window.innerWidth < 992) {
+      const parentLi = icon.closest('.dropdown');
+      const allDropdowns = document.querySelectorAll('.dropdown');
+
+      allDropdowns.forEach(li => {
+        if (li !== parentLi) {
+          li.classList.remove('open');
+          const i = li.querySelector('.dropdown-icon');
+          if (i) i.classList.remove('rotate');
+        }
+      });
+
+      parentLi.classList.toggle('open');
+      icon.classList.toggle('rotate');
+    }
+  }
+</script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const wrapper = document.querySelector('.testimonial-wrapper');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  let currentIndex = 0;
+  let slideWidth = slides[0].offsetWidth;
+
+  // Recalculate on resize
+  window.addEventListener('resize', () => {
+    slideWidth = slides[0].offsetWidth;
+    wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  });
+
+  // Auto-slide every 3 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }, 3000);
+</script>
+
+<script>
+  const currentPage = location.pathname.split("/").pop();
+  const allLinks = document.querySelectorAll(".navbar a");
+
+  allLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+</body>
+</html>
