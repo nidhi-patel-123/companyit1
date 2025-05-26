@@ -197,7 +197,7 @@
     }
 
     .blog-card {
-      background-color: #1a1a1aad;
+      background-color: #1a1a1a;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -241,6 +241,7 @@
     .blog-content {
       padding: 25px;
       width: 50%;
+      color: aliceblue;
     }
 
     .blog-content h5 {
@@ -249,7 +250,7 @@
     }
 
     .blog-content p {
-      color: #fffafa;
+      color: #fffafa !important;
       font-size: 0.875rem;
       margin-bottom: 10px;
     }
@@ -278,3 +279,4 @@
         font-size: 2rem;
       }
     }
+    /* ------------------------------------------------------- */
