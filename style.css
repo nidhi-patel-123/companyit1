@@ -33,7 +33,7 @@
     }
 
     .nav-link:hover {
-      color: #f25c05 !important;
+      color: #f29111 !important;
       background-color: #f8f8f8;
       border-radius: 8px;
     }
@@ -106,7 +106,7 @@
 
 /* --------------------heroooo------------------------- */
 .hero {
-      background: url('./images/homrhero.avif') center center / cover no-repeat;
+     background: url('https://img.freepik.com/free-photo/black-white-portrait-digital-nomads_23-2151253987.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740') center center / cover no-repeat; 
       color: white;
       height: 80vh;
       display: flex;
@@ -132,15 +132,15 @@
 .btn-primary {
   position: relative;
   background-color: #f29111 !important;
-  color: white;
-  border: none;
+  color: white !important;
+  border: none !important;
   padding: 12px 30px;
   font-size: 16px;
- border-radius: 0%;
+ border-radius: 0% !important;
   cursor: pointer;
   overflow: hidden;
-  z-index: 1;
-  transition: border-radius 0.4s ease;
+  z-index: 1 ;
+  transition: border-radius 0.4s ease !important;
 }
 
 .btn-primary::before {
@@ -179,7 +179,26 @@
       .hero h5 {
         font-size: 1rem;
       }
-    }
+    } 
+    .carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.carousel-inner img {
+  max-height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex !important;
+  justify-content: center;
+}
+
     /* -----------------home about---------------------------------- */
       .highlight-text {
       color: #f29111;
@@ -262,63 +281,101 @@ color: #eee;
   object-fit: cover;
 }
 /* ---------------------3box service-------------------------- */
- .card-custom {
-    background-color: #f29111;
-    border: none;
-    border-radius: 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    overflow: hidden;
-    transition: transform 0.3s;
-    padding: 10px 10px 0px 10px;
-  }
+ .section-title span {
+      background-color: #ffe8cf;
+      color: #f29111;
+      font-weight: 600;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 12px;
+    }
 
-  .card-custom:hover {
-    transform: translateY(-10px);
-  }
+    .section-title h2 {
+      font-weight: 700;
+      font-size: 28px;
+      color: #1c1c42;
+    }
 
-  .card-custom img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: filter 0.3s ease;
-  }
+    .card-service {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      background: white;
+      transition: transform 0.3s ease;
+    }
 
-  .card-custom:hover img {
-    filter: blur(2px);
-  }
+    .card-service:hover {
+      transform: translateY(-5px);
+    }
 
-  .card-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #f0f0f0;
-    box-shadow: 0 10px 20px rgba(153, 153, 153, 0.37);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color:#f29111;
-  }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      filter: grayscale(100%) opacity(0.9);
+    }
 
-  .read-more {
-    font-size: 0.9rem;
-    color: #fff;
-    font-weight: 500;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-  }
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background: #f29111;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
 
-  .read-more::after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 2px;
-    background: white;
-    margin-top: 4px;
-  }
+    .card-body {
+      padding-top: 50px;
+    }
+
+    .read-more {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1c1c42;
+      text-decoration: none;
+    }
+
+    .read-more::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background: #1c1c42;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .footer-note {
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    .footer-note a {
+      font-weight: 600;
+      color: #1c1c42;
+      text-decoration: underline;
+    }
+    .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(100%) opacity(0.9);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  filter: none;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(242, 145, 17, 0.5);
+}
+
   /* -------------------------our latest project------------------------ */
  .project-card {
   position: relative;

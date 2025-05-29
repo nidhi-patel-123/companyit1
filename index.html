@@ -15,7 +15,146 @@
   <link rel="stylesheet" href="style.css">
   <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+<!-- Font Awesome (for stars) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+  <style>
+    .hover-box {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .hover-overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(242, 144, 17, 0.39);
+      transition: transform 0.6s ease;
+      z-index: 2;
+    }
+
+    .hover-left .hover-overlay {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    .hover-left:hover .hover-overlay {
+      transform: translateX(0);
+    }
+
+    .hover-right .hover-overlay {
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    .hover-right:hover .hover-overlay {
+      transform: translateX(0);
+    }
+
+    .hover-box:hover img {
+      transform: scale(1.05);
+    }
+    /* Custom Image Hover */
+.img-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.img-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Section spacing */
+section {
+  background: #fff;
+}
+
+/* Typography tweaks */
+h2 {
+  font-size: 1.9rem;
+  line-height: 1.4;
+}
+
+.btn-success {
+  background-color: #f29111;
+  border-color: #f29111;
+}
+.btn-success:hover {
+  background-color: #f29111;
+  border-color: #f29111;
+}
+
+  </style>
+  <style>
+.testimonial-section {
+  background-color: #fff;
+}
+
+.testimonial-card {
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.testimonial-text {
+  color: #555;
+  font-size: 15px;
+  padding: 0 10px;
+  min-height: 120px;
+}
+
+.quote-icon {
+  font-size: 60px;
+  color: #f8f9fa;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.swiper {
+  padding: 30px 0;
+}
+
+.custom-swiper-btn {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+}
+</style>
 
 </head>
 <body>
@@ -30,7 +169,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarContent">
-    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
       
       <!-- Home -->
       <li class="nav-item dropdown">
@@ -128,170 +267,115 @@
   </section>
 <!-- -----------------------home about------------------------------ -->
 <div class="container py-5">
-  <div class="row align-items-center">
-    <!-- Text Content -->
-    <div class="col-lg-6 mb-4" data-aos="fade-right">
-      <h2 class="section-title">
-        TransMax Logistics <br> Around <span class="highlight-text">The World</span>
-      </h2>
-      <p class="mt-3">
-        Transmax is the world’s driving worldwide coordinations supplier — we uphold industry and exchange the worldwide trade of merchandise through land transport.
-      </p>
-      <p class="text-muted">
-        Our worth added administrations guarantee the progression of products proceeds consistently and supply chains stay lean and streamlined for progress.
-      </p>
-      <button class="btn btn-primary mt-3 " style="font-weight: bold;">MORE ABOUT US</button>
-    </div>
-
-    <!-- Image and Stats -->
-    <div class="col-lg-6" data-aos="fade-left">
+  <div class="row">
+    <!-- Left Column: Images -->
+    <div class="col-lg-6 col-md-6 d-none d-md-block">
       <div class="row">
-        <div class="col-md-8 mb-3 image-wrapper">
-          <img src="./images/homeabout.webp" alt="Main" class="img-fluid main-img">
-          <img src="./images/homeabout2.webp" alt="Overlay" class="overlay-img d-none d-md-block img-fluid">
+        <!-- Image 1 -->
+        <div class="col-6 p-2">
+          <div class="hover-box hover-left">
+            <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service12.jpg" alt="Image 1">
+            <div class="hover-overlay"></div>
+          </div>
         </div>
-     <div class="col-md-4 d-flex align-items-center justify-content-center">
-  <div class="stats-box">
-    <h3>15,350+</h3>
-    <p class="mb-0">Clients Worldwide</p>
-  </div>
+        <!-- Image 2 -->
+        <div class="col-6 p-2">
+          <div class="hover-box hover-right">
+            <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service13.jpg" alt="Image 2">
+            <div class="hover-overlay"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
+    <!-- Right Column: Text -->
+    <div class="col-lg-6 col-md-6 col-12">
+      <div class="mb-3">
+        <h5 style="color: #f29111; font-size: 14px; font-weight: 600; text-transform: uppercase;">OUR SERVICES</h5>
+        <h3 style="font-size: 28px; font-weight: 700;">Provide awesome customer service with our tools.</h3>
+      </div>
+      <p style="font-size: 16px; color: #333;">
+        We help our clients succeed by creating brand identities, digital experiences, and print materials that communicate clearly.
+      </p>
+
+      <ul style="list-style: none; padding-left: 0; margin-top: 25px;">
+        <li style="margin-bottom: 20px;">
+          <h4 style="font-size: 18px; font-weight: 600;">User Friendly dashboard &amp; Cool Interface.</h4>
+          <p style="margin-bottom: 0; font-size: 15px;">We’re full service which means we’ve got you covered on design and content right.</p>
+        </li>
+        <li>
+          <h4 style="font-size: 18px; font-weight: 600;">Strong Management &amp; Security.</h4>
+          <p style="margin-bottom: 0; font-size: 15px;">We’re full service which means we’ve got you covered on design and content right.</p>
+          <p style="margin-bottom: 0; font-size: 15px;">We’re full service which means we’ve got you covered on design and content right.</p>
+          <h4 style="font-size: 18px; font-weight: 600;">Strong Management &amp; Security.</h4>
+          <p style="margin-bottom: 0; font-size: 15px;">We’re full service which means we’ve got you covered on design and content right.</p>
+
+          <p style="margin-bottom: 0; font-size: 15px;">We’re full service which means we’ve got you covered on design and content right.</p>
+
+
+        </li>
+        
+      </ul>
+    </div>
+  </div>
 </div>
-</div>
+
+
 <!-- --------------------home servie---------------------------- -->
- <section class="text-center py-5">
+<section class="py-5">
   <div class="container">
-    <div class="section-title mb-2">DEPARTMENTS</div>
-    <h2 class="fw-bold display-6 mb-3">We enable constant enterprise<br> transformation at speed and scale.</h2>
-    <p class="mb-5 text-white-50">We craft unique digital experiences. With more than ten years of knowledge and expertise we design and code clean websites!</p>
-
-    <div class="row g-4">
-      <!-- Card 1 -->
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="card card-custom">
-          <img src="images/homeservice1.png" alt="Image 1">
-          <div class="card-body">
-            <div class="card-icon">
-              <i class="bi bi-gear"></i>
-            </div>
-            <p class="fw-semibold" style="color: aliceblue;">Driving customer outcomes using new technology Driving customer out</p>
-            <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
-          </div>
-        </div>
+    <!-- First Row -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <span class=" fw-semibold small" style="color: #f29111;">KNOW OUR BUSINESS</span>
+        <h2 class="fw-bold text-dark mt-2">Take care of the people who take<br>care of your business</h2>
+        <p class="text-muted mt-3">With over 25 years of experience, we have crafted thousands of strategic discovery process that enables us to peel back the layers which enable us to understand, connect, represent and dominate your market.</p>
+        <a href="#" class="btn btn-success  btn-primary  mt-3">More About Us</a>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card card-custom">
-          <img src="images/homeservice2.png" alt="Image 2">
-          <div class="card-body">
-            <div class="card-icon">
-              <i class="bi bi-link-45deg"></i>
-            </div>
-            <p class="fw-semibold" style="color: aliceblue;">Questions must be able to answer every business must be able to answer</p>
-          <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card card-custom">
-          <img src="images/homeservice3.png" alt="Image 3">
-          <div class="card-body">
-            <div class="card-icon">
-              <i class="bi bi-tools"></i>
-            </div>
-            <p class="fw-semibold" style="color: aliceblue;">Questions must be able to answer every business must be able to answer</p>
-          <a href="#" class="btn-primary mt-3" style="font-weight: bold;text-decoration: none;">READ MORE</a>
-          </div>
-        </div>
+      <div class="col-lg-6 position-relative d-flex justify-content-center flex-wrap gap-3">
+        <!-- <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service03.jpg" class="img-fluid img-hover rounded shadow-sm z-1" style="transform: translateY(40px);" alt="Image 1" /> -->
+           <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service03.jpg" class="img-fluid rounded shadow img-hover" alt="Triangle Model" style="width: 100%;height: 450px;" />
+        <!-- <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service02.jpg" class="img-fluid img-hover rounded shadow-sm z-1" style="transform: translateY(-40px);" alt="Image 3" /> -->
       </div>
     </div>
-  </div>
-</section>
-<!-- Radix Section -->
-<section class="custom-section section-light-bg" id="radix">
-  <div class="container">
-    <div class="row align-items-center" data-aos="fade-right">
-      <div class="col-lg-6 image-effect mb-4 mb-lg-0">
-        <img
-          src="https://img.freepik.com/free-vector/cartoon-exhausted-woman-sitting-table-working_74855-6943.jpg?ga=GA1.1.1068734637.1747390429&semt=ais_hybrid&w=740"
-          alt="Radix Screenshot"
-          class="img-fluid shadow"
-          style="width: 100%; height: auto; max-height: 390px;"
-        />
+
+    <!-- Second Row -->
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="https://motivoweb.com/zad/wp-content/uploads/2022/02/service05.jpg" class="img-fluid rounded shadow img-hover" alt="Triangle Model" />
       </div>
       <div class="col-lg-6">
-        <div class="card hover-card text-box" data-aos="fade-left" style="min-height: 390px;">
-          <h2 class="module-title">SOLUTION</h2>
-          <p style="color: gray; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            We are a forward-thinking solution company committed to helping businesses
-            overcome their most complex challenges through innovative and scalable strategies.
-            Our expert team combines cutting-edge technology with deep industry knowledge to
-            deliver customized solutions tailored to each client’s unique needs. From digital
-            transformation to improving operational efficiency, we partner closely with our
-            clients to ensure impactful and sustainable results. Focused on smart problem-solving
-            rather than one-size-fits-all fixes, we prioritize customer satisfaction and long-term
-            success. At our core, we turn challenges into opportunities by blending creativity,
-            clarity, and commitment.
-          </p>
-                 <button class=" btn btn-primary" style="width: 200px;">Read More</button>
-        </div>
+        <span class="fw-semibold small" style="color: #f29111;">KNOW OUR BUSINESS</span>
+        <h2 class="fw-bold text-dark mt-2">The most exquisite agency for<br>provide branding services.</h2>
+        <p class="text-muted mt-3">With over 25 years of experience, we have crafted thousands of strategic discovery process that enables us to peel back the layers which enable us to understand, connect, represent and dominate your market.</p>
+        <ul class="list-unstyled text-dark mt-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill me-2" style="color: #f29111;"></i>
+            Simple Registration System
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill me-2" style="color: #f29111;"></i>
+            Request API Integration
+          </li>
+        </ul>
+        <a href="#" class="btn btn-success btn-primary px-4 mt-3">Get Start Now</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Rely Section -->
-<section class="custom-section section-dark-bg" id="rely">
-  <div class="container">
-    <div class="row align-items-center flex-lg-row-reverse" data-aos="fade-left">
-      <div class="col-lg-6 image-effect mb-4 mb-lg-0">
-        <img
-          src="https://img.freepik.com/free-vector/work-home-concept-flat-design_1308-99034.jpg?ga=GA1.1.1068734637.1747390429&semt=ais_hybrid&w=740"
-          alt="Rely Screenshot"
-          class="img-fluid shadow"
-          style="width: 100%; height: auto; max-height: 390px;"
-        />
-      </div>
-      <div class="col-lg-6">
-        <div class="card hover-card text-box" data-aos="fade-right" style="min-height: 390px;">
-          <h2 class="module-title">TAKE</h2>
-          <p style="color: gray; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            We are a forward-thinking solution company committed to helping businesses
-            overcome their most complex challenges through innovative and scalable strategies.
-            Our expert team combines cutting-edge technology with deep industry knowledge to
-            deliver customized solutions tailored to each client’s unique needs. From digital
-            transformation to improving operational efficiency, we partner closely with our
-            clients to ensure impactful and sustainable results. Focused on smart problem-solving
-            rather than one-size-fits-all fixes, we prioritize customer satisfaction and long-term
-            success. At our core, we turn challenges into opportunities by blending creativity,
-            clarity, and commitment.
-          </p>
-          <button class=" btn btn-primary" style="width: 200px;">Read More</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 <!-- -----------------------------out latest project------------------------ -->
  <section class="py-5 bg-light">
   <div class="container text-center">
-    <p class=" text-uppercase mb-1" data-aos="fade-up">Latest Project</p>
+    <p class=" text-uppercase mb-1" data-aos="fade-up" style="color: #f29111;">Latest Project</p>
     <h2 class="fw-bold mb-5" data-aos="fade-up" data-aos-delay="100">
       Our Recently Completed<br>Latest Projects
     </h2>
 
     <div class="row g-4">
       <!-- Repeat this card structure -->
-      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md- col-lg-6" data-aos="fade-up" data-aos-delay="200">
         <div class="project-card">
           <img src="images/hproject4.avif" class="img-fluid" alt="Project Image">
           <div class="overlay black-overlay"></div>
@@ -350,7 +434,34 @@
           </div>
         </div>
       </div>
-
+  <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject3.png" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+               <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <img src="images/hproject3.png" class="img-fluid" alt="Project Image">
+          <div class="overlay black-overlay"></div>
+          <div class="orange-strip">
+            <div class="text-white px-3 py-2 d-flex justify-content-between align-items-center">
+              <div>
+               <h6 class="mb-0" style="font-weight: bold;">Product Development Technology</h6>
+              </div>
+              <div class="plus-icon">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- You can clone the above card for more items -->
       <!-- Change data-aos-delay="300", "400", "500" etc. -->
     </div>
@@ -400,97 +511,121 @@
 </section> -->
 <!-- -------------------------------------------------------------what saying----------------------- -->
 
-<div class="container testimonial-section">
-  <div class="row align-items-center">
-    <!-- Left Side -->
-    <div class="col-md-6" data-aos="fade-right">
-      <h6 class="text-uppercase text-warning fw-bold">Testimonial</h6>
-      <h2 class="fw-bold">What Customers Are Saying?</h2>
-      <p class="text-muted">
-        There are many variations of passages of Lorem Ipsum available,
-        but the majority have suffered alteration in some form, by injected humour, or randomised.
-      </p>
-      <button class="btn btn-primary" style="background-color: #f29111;border: #f29111; border-radius: 0%;">Let’s talk</button>
+<section class="testimonial-section py-5">
+  <div class="container position-relative">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
 
-      <div class="mt-5 text-center text-md-start">
-        <img src="images/why.png" alt="VR Headset" class="floating-img"/>
-      </div>
-    </div>
-
-    <!-- Right Side -->
- <div class="testimonial-container">
-  <div class="testimonial-wrapper">
-    <div class="testimonial-slide" data-aos="fade-left">
-      <div class="testimonial-box">
-        <div class="star-rating mb-3">★★★★★</div>
-        <p class="text-muted">
-          Highly satisfied with the support and guidance provided by Ostech.<br>
-          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
-        </p>
-        <h6 class="fw-bold mb-0">Leslie Alexander</h6>
-        <small class="text-muted">Customer</small>
-        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
-          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Customer 1"/>
-          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Customer 2" class="highlighted"/>
-          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Customer 3"/>
+        <!-- Testimonial Item -->
+        <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="testimonial-slide" data-aos="fade-left">
-      <div class="testimonial-box">
-        <div class="star-rating mb-3">★★★★☆</div>
-          <p class="text-muted">
-          Highly satisfied with the support and guidance provided by Ostech.<br>
-          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
-        </p>
-        <h6 class="fw-bold mb-0">Michael Scott</h6>
-        <small class="text-muted">Customer</small>
-        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
-          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Customer 4"/>
-          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Customer 5" class="highlighted"/>
-          <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Customer 6"/>
+        <!-- Repeat other testimonial cards here with different content -->
+        <!-- ... -->
+             <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://img.freepik.com/free-photo/portrait-beautiful-young-woman-standing-grey-wall_231208-10760.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
         </div>
-      </div>
-    </div>
+            <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://img.freepik.com/free-photo/business-concept-smiling-thoughtful-handsome-man-standing-white-isolated-background-touching-his-chin-with-hand_1258-80750.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
+        </div>
+            <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://img.freepik.com/free-photo/portrait-happy-smiling-young-businessman-blue-suit-isolated-white-wall_231208-9208.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
+        </div>
+            <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://img.freepik.com/free-photo/confident-latin-business-leader-portrait-young-businesswoman-suit-glasses-posing-with-arms-folded-looking-camera-smiling-female-leadership-concept_74855-14232.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
+        </div>
+            <div class="swiper-slide">
+          <div class="testimonial-card p-4 text-center shadow-sm">
+            <img src="https://img.freepik.com/free-photo/young-joyful-student-man-holding-thumb-up-isolated_171337-14947.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" class="testimonial-img mb-3" alt="User">
+            <div class="star-rating mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">``If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file``</p>
+            <h5 class="fw-bold mt-3">Mai Kamal</h5>
+            <small class="text-muted">CEO Founder</small>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
+        </div>
 
-    <div class="testimonial-slide" data-aos="fade-left">
-      <div class="testimonial-box">
-        <div class="star-rating mb-3">★★★★★</div>
-          <p class="text-muted">
-          Highly satisfied with the support and guidance provided by Ostech.<br>
-          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
-        </p>
-        <h6 class="fw-bold mb-0">Pam Beesly</h6>
-        <small class="text-muted">Customer</small>
-        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
-          <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Customer 7"/>
-          <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Customer 8" class="highlighted"/>
-          <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Customer 9"/>
-        </div>
       </div>
-    </div>
-
-    <div class="testimonial-slide" data-aos="fade-left">
-      <div class="testimonial-box">
-        <div class="star-rating mb-3">★★★★☆</div>
-        <p class="text-muted">
-          Highly satisfied with the support and guidance provided by Ostech.<br>
-          Their team’s knowledge and professionalism have been instrumental in<br> keeping our business on the cutting edge.
-        </p>
-        <h6 class="fw-bold mb-0">Jim Halpert</h6>
-        <small class="text-muted">Customer</small>
-        <div class="customer-imgs d-flex justify-content-center justify-content-md-start mt-4">
-          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Customer 10"/>
-          <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Customer 11" class="highlighted"/>
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Customer 12"/>
-        </div>
-      </div>
+      
+      <!-- Arrows -->
+      <div class="swiper-button-prev custom-swiper-btn  text-white rounded-circle" style="background-color: #f29111; width: 40px;height: 40px;"></div>
+      <div class="swiper-button-next custom-swiper-btn  text-white rounded-circle" style="background-color: #f29111; width: 40px;height: 40px;"></div>
     </div>
   </div>
-</div>
-  </div>
-</div>
+</section>
+
 
 <!-- CTA Section -->
 <!-- <div class="expert-cta container">
@@ -505,19 +640,19 @@
 <!-- -------------------contactus---============ -->
 
 
-<section class="contact-section" style="background-color: #f2901107;">
+<section class="contact-section">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Side -->
         <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-          <h6 class="text-uppercase text-muted">Contact Us</h6>
+          <h6 class="text-uppercase text-muted" style="color: #f29111;">Contact Us</h6>
           <h2 class="fw-bold">Request A Quote</h2>
           <p class="mb-4">
             At Teba Technology Solutions, we leverage IT security and automation to help you:
             If you have any questions or need help, feel free to contact our team, or call
             <span class="highlight-phone">(002) 010349845</span>
           </p>
-          <img src="images/homecontact.webp" alt="Contact illustration" class="contact-image">
+          <img src="https://img.freepik.com/free-vector/call-center-concept-illustration_114360-3430.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740" alt="Contact illustration" class="contact-image">
         </div>
 
         <!-- Right Side: Form -->
@@ -572,6 +707,53 @@
   </div>
 </div> -->
 <!-- -------------------------footer--------------------------------- -->
+
+<section 
+  data-aos="fade-up"
+  style="
+    background: url('https://img.freepik.com/free-photo/diverse-people-using-digital-devices_53876-101881.jpg?uid=R195395238&ga=GA1.1.1975205788.1747372593&semt=ais_items_boosted&w=740') no-repeat center center; 
+    background-size: cover; 
+    min-height: 400px; 
+    position: relative; 
+    display: flex; 
+    align-items: center;
+  "
+>
+  <div 
+    style="
+      position: absolute; 
+      inset: 0; 
+      background-color: rgba(0, 0, 0, 0.5);
+    "
+  ></div>
+  
+  <div class="container text-white text-center" style="position: relative; z-index: 2;">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="fw-bold" style="font-size: 2.5rem;">LET’S WORK TOGETHER</h1>
+        <p class="lead mb-4">
+          Like Nothing You've Seen. Purchase Today &amp; Experience Teba
+        </p>
+        <div 
+          class="d-flex justify-content-center flex-column flex-md-row align-items-center gap-3"
+        >
+          <a 
+            href="#" 
+            class="btn btn-light px-4 py-2 fw-semibold" 
+            style="border-radius: 10px;"
+          >
+            Learn More
+          </a>
+          <span class="small">Try Teba today! Download Now.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 <footer class="footer text-light">
   <div class="container">
     <div class="row">
@@ -679,5 +861,23 @@
     }
   });
 </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 }
+    }
+  });
+</script>
+
 </body>
 </html>

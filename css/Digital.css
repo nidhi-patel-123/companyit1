@@ -256,72 +256,154 @@
       }
     }
     /* ------------------------top bootom 2 cart---------------------------- */
-      .expertise-title {
-      text-align: center;
-      margin-bottom: 2rem;
+       .team-section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
     }
 
-    .expertise-title small {
+    .team-section .badge {
       color: #f29111;
+      font-size: 13px;
       font-weight: 600;
       letter-spacing: 1px;
     }
 
-    .expertise-title h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #0d1b44;
+    .team-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1c1c4c;
+      line-height: 1.3;
     }
 
-    .expertise-card {
-     
-      overflow: hidden;
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .feature i {
+      font-size: 24px;
+      color: #f29111;
+      margin-right: 15px;
+      margin-top: 4px;
+    }
+
+    .feature h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1c1c4c;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      margin: 0;
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    .team-card {
       position: relative;
-      transition: transform 0.4s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
     }
 
-    .expertise-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    .team-card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .expertise-overlay {
+    .overlay {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      color: white;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.5rem;
-      color: white;
+      justify-content: space-between;
+      padding: 20px;
     }
 
-    .expertise-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
+    .overlay .social-icons {
+      display: flex;
+      gap: 10px;
+      font-size: 16px;
     }
 
-    .expertise-title-card {
-      font-size: 1.25rem;
+    .overlay .info-box {
+      background: white;
+      color: #1c1c4c;
+      padding: 10px 15px;
+      border-radius: 4px;
+    }
+
+    .overlay .info-box h6 {
+      margin: 0;
       font-weight: 700;
-      margin-bottom: 0.5rem;
     }
 
-    .expertise-text {
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
+    .overlay .info-box small {
+      color: #6c757d;
     }
 
-    .expertise-arrow {
-      font-size: 1.25rem;
-      font-weight: bold;
-      transition: transform 0.3s ease;
+    .btn-custom {
+      background-color: #f29111;
+      color: white;
+      border-radius: 4px;
+      padding: 10px 25px;
+      font-weight: 600;
+      border: none;
     }
 
-    .expertise-card:hover .expertise-arrow {
-      transform: translateX(6px);
+    .decor-square {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #d3ccf7;
     }
+
+    .decor-square.square1 { top: 20px; left: 240px; }
+    .decor-square.square2 { top: 90%; left: 600px; }
+    .decor-square.square3 { top: 40%; left: 450px; }
+    .decor-square.square4 { top: 30%; right: 100px; }
+    .team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
     /* ----------------------------blog----------------------------------- */
       .blog-box {
       margin-bottom: 40px;
